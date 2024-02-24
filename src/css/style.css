@@ -1,0 +1,201 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #0e7cd6;
+    --color2: #7ba9ce;
+    --light: #fff;
+    --bg-color: #190748;
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 1,
+  'opsz' 24;
+}
+
+body{
+    background: var(--bg-color);
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 5rem;  
+}
+
+.menu-container{
+    width: 100vw;
+    max-width: 450px;
+    z-index: 2000;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home-menu{
+    /* position: fixed; */
+    display: block;
+    left: 0;
+    margin-left: 1rem;
+    margin-top: 5rem;
+    color: var(--light);
+    font-size: 4rem;
+    z-index: 200;
+}
+
+#burguer-menu{
+    /* position: fixed; */
+    display: block;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    color: var(--light);
+    font-size: 4rem;
+    z-index: 200;
+}
+
+.hidden{
+    display: none !important;
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 10vh;
+    border-top: 5vh;
+    width: 100vw;
+    max-width: 450px;
+    height: 85vh;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    /* todo: cambiar a transparente */
+    background-color: #0001;
+}
+
+.button-grid{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 3rem;
+    
+}
+
+.menu-btn{
+    width: 100%;
+    border-radius: 1rem;
+    height: 4rem;
+    background: var(--color1);
+    font-size: 2rem;
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(49, 15, 202, 0.19), 0 6px 6px rgba(137, 191, 216, 0.23);
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+}
+
+
+
+/* utilitys */
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+#olla-img{
+    filter: drop-shadow(5px 5px 5px #333)
+}
+
+/* MENU FLOTANTE */
+
+#modal-menu{
+    background-color: var(--bg-color);
+    z-index: 100;
+}
+
+/* Pantalla inicial */
+
+#start-screen img{
+    margin: 2rem
+}
+
+#nuevoJuegoScreen{
+    /* background-color: #0e7cd6; */
+    gap: 2rem;
+}
+
+.mostradorPalabra{
+    height: 50%;
+    background: #fff2;
+    margin: 3rem 0rem;
+    border-radius: 2rem 0rem;
+}
+
+.btn-lg{
+    height: 8rem;
+}
+
+.btn-green{
+    background-color: rgb(190, 192, 55);
+    color: black;
+}
+
+
+/* BORRAR AL TERMINARRRR */
+.screen{
+    background-color: var(--bg-color);
+}
+
+#nuevoJuegoScreen{
+    z-index: 1000;
+}
+
+.olla-counter{
+    background-image: url("../img/olla.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11rem;
+    
+}
+
+.papelesCount{
+    margin-top: 6rem;
+    font-size: 5rem;
+}

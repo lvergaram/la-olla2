@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    
+    <!-- MENU FLOTANTE -->
+    <section class="menu-container">
+        <span id="home-menu" class="material-symbols-outlined">
+            home
+            </span>
+        <span class="material-symbols-outlined" id="burguer-menu">
+            menu
+            </span>    
+    </section>
+       
+    <section id="modal-menu" class="screen" >
+        <div class="button-grid">
+            <button class="menu-btn">opcion1</button>
+            <button class="menu-btn">opcion2</button>
+            <button class="menu-btn">opcion3</button>
+            <button class="menu-btn">opcion4</button>
+            <button class="menu-btn">opcion5</button>
+            <button class="menu-btn">close</button>
+        </div>
+    </section>
+
+    <!-- PANTALLA INICIAL -->
+    <section class="screen" id="start-screen">
+        <h1>jugar</h1>
+        <img id="olla-img" src="./src/img/olla.png" alt="">
+        <div class="button-grid">
+            <button id="newGameBtn" class="menu-btn">Nuevo Juego</button>
+            <button id="teamsBtn" class="menu-btn">Equipos</button>
+        </div>
+    </section>
+
+
+
+    <!-- Nuevo Juego -->
+    <section class="screen" id="nuevoJuegoScreen">
+
+        <h2>Papelitos:</h2>
+        <div class="olla-counter">
+            <span class="papelesCount">0</span>
+        </div>
+        <button id="nuevoPapelBtn" class="menu-btn btn-lg btn-green">Agregar PAPEL!</button>
+        <button id="nuevaRondaBtn" class="menu-btn">Nueva Ronda</button>
+
+        
+    </section>
+    
+
+    <!-- Equipos -->
+    
+    <section id="teamsScreen" class="screen ">
+        
+        <h2>Equipo 1: <span class="equipo1name">Sin Nombre</span></h2>
+
+        <button id="changeNameTeam1Btn" class="menu-btn">Cambiar nombre</button>
+        
+        <hr>
+
+        <h2>Equipo 2: <span class="equipo2name">Sin Nombre</span></h2>
+
+        <button id="changeNameTeam2Btn" class="menu-btn">Cambiar nombre</button>
+
+    </section>
+    
+
+    <!-- Nueva ronda -->
+    <section class="screen" id="nuevaRondaScreen">
+
+        <div class="row">
+            <div class="column">
+                <span ">Equipo 1:</span> 
+                <h2 class="equipo1name">Nombre</h2>
+                <p><span class="equipo1Score">0</span> pts.</p>
+            </div>
+            
+            <span class="material-symbols-outlined">
+                cached
+            </span>
+
+            <div>
+                <span>Equipo 2:</span> 
+                <h2 class="equipo2name">Nombre</h2>
+                <p><span class="equipo2Score">0</span> pts.</p>
+            </div>
+        </div>
+        <hr>
+
+        <p class="text-center">Su palabra es:</p>
+        
+        <div class="mostradorPalabra">
+            
+        </div>
+
+        <button id="sacarPapelBtn" class="menu-btn btn-lg btn-green">
+            ADIVINADO <br> (sacar otro)
+        </button>
+
+        <button id="devolverPapelBtn" class="menu-btn">
+            devolver papel
+        </button>
+    
+    </section>
+
+        
+    
+
+    
+    <script src="./src/js/app.js"></script>
+</body>
+</html>
