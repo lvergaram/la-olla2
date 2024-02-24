@@ -34,6 +34,8 @@ let devolverPapelBtn = document.getElementById("devolverPapelBtn")
 let sacarPapelBtn = document.getElementById("sacarPapelBtn")
 let nuevoPapelBtn = document.getElementById("nuevoPapelBtn")
 let nuevaRondaBtn = document.getElementById("nuevaRondaBtn")
+let devolverPapelesBtn = document.getElementById("devolverPapelesBtn")
+
 
     // SCREENS
 let nuevoJuegoScreen = document.getElementById("nuevoJuegoScreen")
@@ -96,7 +98,7 @@ nuevaRondaBtn.addEventListener("click",
 
 sacarPapelBtn.addEventListener("click", () => sacarPapel() )
 
-
+devolverPapelesBtn.addEventListener("click", () => devolverTodosLosPapeles() )  
 
 // GAME FUNCTIONS
 
@@ -154,10 +156,16 @@ function sacarPapel(){
         let papel = palabrasEnJuego.pop()
         renderTextByClassName(".mostradorPalabra",papel)
         palabrasYaSacadas.push( papel )
+        renderTextByClassName(".papelesCount",palabrasEnJuego.length)
         console.log("fuera" + palabrasYaSacadas)
         console.log("en olla"+ palabrasEnJuego)
-    
     }
 
+}
+
+function devolverTodosLosPapeles(){
+    palabrasEnJuego = [...palabrasEnJuego, ...palabrasYaSacadas];
+    palabrasYaSacadas = [];
+    renderTextByClassName(".papelesCount",palabrasEnJuego.length)
 }
 
